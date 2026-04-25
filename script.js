@@ -362,8 +362,8 @@ if (contactForm) {
       } else {
         alert('Something went wrong. Please email me directly.');
       }
-    } catch {
-      alert('Network error. Please email me directly.');
+    } catch (err) {
+      alert('Error: ' + err.message);
     }
 
     sendBtn.disabled = false;
