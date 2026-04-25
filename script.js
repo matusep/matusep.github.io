@@ -362,8 +362,9 @@ if (contactForm) {
       } else {
         alert('Something went wrong. Please email me directly.');
       }
-    } catch (err) {
-      alert('Error: ' + err.message);
+    } catch {
+      contactForm.submit();
+      return;
     }
 
     sendBtn.disabled = false;
