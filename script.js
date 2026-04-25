@@ -345,10 +345,14 @@ if (contactForm) {
     sendBtn.querySelector('.btn-send-text').textContent = 'Sending…';
 
     try {
+      const data = Object.fromEntries(new FormData(contactForm));
       const res = await fetch('https://formspree.io/f/xwvazewa', {
         method: 'POST',
-        headers: { 'Accept': 'application/json' },
-        body: new FormData(contactForm),
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
       });
 
       if (res.ok) {
