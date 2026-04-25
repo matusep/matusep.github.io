@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Matthew | Portfolio</title>
+  <meta name="description" content="Matthew — Information & Networking Technologies student from Žilina. Passionate about astronomy and tech." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌌</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-trail" id="cursorTrail"></div>
+
+  <!-- Learning Badge -->
+  <div class="learning-badge" id="learningBadge">
+    <span class="badge-dot"></span>
+    <span>Currently learning</span>
+    <span class="badge-subject">Networking Fundamentals</span>
+  </div>
+
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="nav-logo">M<span class="dot">.</span></div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#journey">Journey</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#hobbies">Interests</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-status">
+      <span class="status-dot"></span>
+      <span>Online</span>
+    </div>
+    <button class="nav-mobile-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+      <i class="fas fa-bars"></i>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#about" class="mobile-link">About</a></li>
+      <li><a href="#journey" class="mobile-link">Journey</a></li>
+      <li><a href="#projects" class="mobile-link">Projects</a></li>
+      <li><a href="#hobbies" class="mobile-link">Interests</a></li>
+      <li><a href="#contact" class="mobile-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- ====== HERO ====== -->
+  <section id="hero">
+    <canvas id="starCanvas"></canvas>
+    <div class="hero-vignette"></div>
+
+    <div class="hero-content">
+      <div class="hero-greeting">Hello, Universe</div>
+      <h1 class="hero-title">
+        <span id="typedText"></span><span class="cursor-blink">|</span>
+      </h1>
+      <p class="hero-sub">Student &nbsp;·&nbsp; Developer &nbsp;·&nbsp; Vibe Coder &nbsp;·&nbsp; Explorer</p>
+      <div class="hero-cta">
+        <a href="#about" class="btn-primary">
+          <span>Explore My Space</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+        <a href="#journey" class="btn-ghost">
+          <span>View Journey</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-orbit" aria-hidden="true">
+      <div class="orbit-ring ring-1"></div>
+      <div class="orbit-ring ring-2"></div>
+      <div class="orbit-planet p1"></div>
+      <div class="orbit-planet p2"></div>
+      <div class="orbit-center">
+        <i class="fas fa-user-astronaut"></i>
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ====== ABOUT ====== -->
+  <section id="about">
+    <div class="section-bg-grid" aria-hidden="true"></div>
+    <div class="section-header reveal">
+      <span class="section-tag">01. About</span>
+      <h2>Who Am <span class="highlight">I?</span></h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-avatar reveal" style="--delay:100ms">
+        <div class="avatar-glow"></div>
+        <div class="avatar-ring r1"></div>
+        <div class="avatar-ring r2"></div>
+        <div class="avatar-core">
+          <i class="fas fa-user-astronaut"></i>
+        </div>
+        <div class="avatar-orbit-dot d1"></div>
+        <div class="avatar-orbit-dot d2"></div>
+      </div>
+      <div class="about-text reveal" style="--delay:200ms">
+        <p class="about-intro">I'm <strong>Matthew</strong>, a student navigating the cosmos of technology.</p>
+        <p>Currently pursuing <span class="tag">Information &amp; Networking Technologies</span> in <strong>Žilina University</strong>, I'm on a mission to master the digital universe, one protocol at a time.</p>
+        <p>Between debugging network configurations and gazing at the stars, I believe that technology and astronomy share the same essence: <em>understanding the invisible connections between things.</em></p>
+        <div class="about-stats">
+          <div class="stat">
+            <span class="stat-number" data-target="4" data-suffix="+">0</span>
+            <span class="stat-label">Year's into IT</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number stat-inf">∞</span>
+            <span class="stat-label">Things to Learn</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number" data-target="100" data-suffix="%">0</span>
+            <span class="stat-label">Passion</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== JOURNEY ====== -->
+  <section id="journey">
+    <div class="section-header reveal">
+      <span class="section-tag">02. Journey</span>
+      <h2>My Path Through <span class="highlight">Tech</span></h2>
+    </div>
+    <div class="timeline">
+      <div class="timeline-line"></div>
+
+      <div class="timeline-item completed reveal" style="--delay:0ms">
+        <div class="timeline-icon"><i class="fas fa-school"></i></div>
+        <div class="timeline-content">
+          <div class="tl-top">
+            <h3>High School — Info &amp; Networking Technologies</h3>
+            <span class="tl-status done">Completed ✓</span>
+          </div>
+          <p>Studied Information &amp; Networking Technologies at secondary school in Banská Bystrica, the launchpad for everything that followed.</p>
+          <div class="progress-bar">
+            <div class="progress-fill" data-width="100"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item completed reveal" style="--delay:100ms">
+        <div class="timeline-icon"><i class="fas fa-bolt"></i></div>
+        <div class="timeline-content">
+          <div class="tl-top">
+            <h3>§21 — Technical Electrical Certification</h3>
+            <span class="tl-status done">Certified ✓</span>
+          </div>
+          <p>Earned the Slovak <strong>Paragraf §21</strong> certification, Individuals with technical education (secondary or university) in the field of electricity. A formal qualification recognising my technical background in electrical engineering.</p>
+          <div class="progress-bar">
+            <div class="progress-fill" data-width="100"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item active reveal" style="--delay:200ms">
+        <div class="timeline-icon"><i class="fas fa-graduation-cap"></i></div>
+        <div class="timeline-content">
+          <div class="tl-top">
+            <h3>College — Info &amp; Networking Technologies</h3>
+            <span class="tl-status progress">In Progress</span>
+          </div>
+          <p>Continuing the same path at university level in Žilina, deepening knowledge of networking, systems, and infrastructure while pushing into new territories.</p>
+          <div class="progress-bar">
+            <div class="progress-fill" data-width="30"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item active reveal" style="--delay:300ms">
+        <div class="timeline-icon"><i class="fas fa-network-wired"></i></div>
+        <div class="timeline-content">
+          <div class="tl-top">
+            <h3>Networking Fundamentals</h3>
+            <span class="tl-status progress">In Progress — 60%</span>
+          </div>
+          <p>Diving into TCP/IP stacks, switching, routing, and the architecture that powers the internet.</p>
+          <div class="progress-bar">
+            <div class="progress-fill" data-width="60"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item future reveal" style="--delay:400ms">
+        <div class="timeline-icon"><i class="fas fa-code"></i></div>
+        <div class="timeline-content">
+          <div class="tl-top">
+            <h3>Programming &amp; Vibe Coding</h3>
+            <span class="tl-status starting">Just Starting — 40%</span>
+          </div>
+          <p>Learning to build, from creating games, scripting automation to crafting full web experiences. Embracing the art of vibe coding to bring ideas to life fast.</p>
+          <div class="progress-bar">
+            <div class="progress-fill" data-width="40"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item future reveal" style="--delay:500ms">
+        <div class="timeline-icon"><i class="fas fa-certificate"></i></div>
+        <div class="timeline-content">
+          <div class="tl-top">
+            <h3>Certifications</h3>
+            <span class="tl-status planned">Planned 🎯</span>
+          </div>
+          <p>Targeting CompTIA Network+, Cisco CCNA and cloud fundamentals to formalise my skills.</p>
+          <div class="progress-bar">
+            <div class="progress-fill" data-width="0"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item future reveal" style="--delay:600ms">
+        <div class="timeline-icon"><i class="fas fa-briefcase"></i></div>
+        <div class="timeline-content">
+          <div class="tl-top">
+            <h3>Professional Career</h3>
+            <span class="tl-status destination">Destination 🌟</span>
+          </div>
+          <p>Joining the IT industry as a network or systems specialist, turning passion into profession.</p>
+          <div class="progress-bar">
+            <div class="progress-fill" data-width="0"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== PROJECTS ====== -->
+  <section id="projects">
+    <div class="section-bg-grid" aria-hidden="true"></div>
+    <div class="section-header reveal">
+      <span class="section-tag">03. Projects</span>
+      <!--<br><span class="section-desc">(Coming Soon!)</span>-->
+      <h2>Building the <span class="highlight">Future</span></h2>
+    </div>
+    <div class="projects-grid">
+      <div class="project-card reveal" style="--delay:0ms">
+        <div class="card-glow"></div>
+        <div class="card-icon"><i class="fas fa-satellite"></i></div>
+        <h3>First Project</h3>
+        <p>Something is being assembled in this corner of the universe. Stay tuned for the launch.</p>
+        <div class="card-footer">
+          <span class="card-tag">Coming Soon</span>
+          <div class="card-dots">
+            <span></span><span></span><span></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal" style="--delay:100ms">
+        <div class="card-glow"></div>
+        <div class="card-icon"><i class="fas fa-globe"></i></div>
+        <h3>Web Experiment</h3>
+        <p>Exploring the web, combining new skills with a fresh perspective on how things connect.</p>
+        <div class="card-footer">
+          <span class="card-tag">In Planning</span>
+          <div class="card-dots">
+            <span></span><span></span><span></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card featured reveal" style="--delay:200ms">
+        <div class="card-glow"></div>
+        <div class="card-badge">Featured</div>
+        <div class="card-icon"><i class="fas fa-server"></i></div>
+        <h3>Network Lab</h3>
+        <p>Setting up a home lab environment to practice routing, switching, and network administration hands-on.</p>
+        <div class="card-footer">
+          <span class="card-tag cyan">Preparing</span>
+          <div class="card-dots">
+            <span></span><span></span><span></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal" style="--delay:300ms">
+        <div class="card-glow"></div>
+        <div class="card-icon"><i class="fas fa-star"></i></div>
+        <h3>???</h3>
+        <p>The best ideas are still forming in the void. Check back when the stars align.</p>
+        <div class="card-footer">
+          <span class="card-tag">Mystery</span>
+          <div class="card-dots">
+            <span></span><span></span><span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="projects-note">
+      <i class="fas fa-rocket"></i>
+      Currently building skills. Real projects launching soon.
+    </p>
+  </section>
+
+  <!-- ====== HOBBIES ====== -->
+  <section id="hobbies">
+    <div class="section-header reveal">
+      <span class="section-tag">04. Interests</span>
+      <h2>What <span class="highlight">Drives</span> Me</h2>
+    </div>
+    <div class="hobbies-grid">
+      <div class="hobby-card reveal" style="--delay:0ms">
+        <div class="hobby-bg"></div>
+        <div class="hobby-icon-wrap">
+          <span class="hobby-emoji">🌌</span>
+        </div>
+        <h3>Astronomy</h3>
+        <div class="hobby-desc">
+          <p>Fascinated by the cosmos, from black holes to nebulae, the universe is the greatest mystery I chase.</p>
+          <div class="hobby-tags">
+            <span>Deep Sky</span>
+            <span>Astrophysics</span>
+            <span>Space Exploration</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hobby-card reveal" style="--delay:150ms">
+        <div class="hobby-bg"></div>
+        <div class="hobby-icon-wrap">
+          <span class="hobby-emoji">💻</span>
+        </div>
+        <h3>Technology</h3>
+        <div class="hobby-desc">
+          <p>Building, breaking, and understanding how systems work. Technology is the language of the future.</p>
+          <div class="hobby-tags">
+            <span>Hardware</span>
+            <span>Software</span>
+            <span>Systems</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hobby-card reveal" style="--delay:300ms">
+        <div class="hobby-bg"></div>
+        <div class="hobby-icon-wrap">
+          <span class="hobby-emoji">🌐</span>
+        </div>
+        <h3>Networking</h3>
+        <div class="hobby-desc">
+          <p>The invisible web connecting everything. Understanding networks means understanding modern civilisation.</p>
+          <div class="hobby-tags">
+            <span>Protocols</span>
+            <span>Infrastructure</span>
+            <span>Security</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hobby-card reveal" style="--delay:450ms">
+        <div class="hobby-bg"></div>
+        <div class="hobby-icon-wrap">
+          <span class="hobby-emoji">🤖</span>
+        </div>
+        <h3>Vibe Coding</h3>
+        <div class="hobby-desc">
+          <p>Riding the wave of AI-assisted development, turning ideas into working software at the speed of thought. Code less, create more.</p>
+          <div class="hobby-tags">
+            <span>AI Tools</span>
+            <span>Rapid Prototyping</span>
+            <span>Web Dev</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== TECH BELT ====== -->
+  <section id="tech-belt" aria-label="Technologies &amp; Tools">
+    <div class="tech-belt-header reveal">
+      <span class="section-tag">Tools &amp; Platforms</span>
+      <p class="belt-subtitle">Technologies I work with</p>
+    </div>
+    <div class="belt-wrapper">
+      <div class="belt-fade belt-fade-left"></div>
+      <div class="belt-fade belt-fade-right"></div>
+      <div class="belt-track">
+        <div class="belt-inner" id="beltInner">
+          <!-- ── Set 1 of 2 (duplicate below for seamless loop) ── -->
+          <div class="belt-item"><img src="https://cdn.simpleicons.org/c++/9B6CF0" onerror="this.closest('.belt-item').style.display='none'" alt="C++" /><span>C++</span></div>
+          <div class="belt-item"><img src="https://cdn.simpleicons.org/java/F58219" onerror="this.closest('.belt-item').style.display='none'" alt="Java" /><span>Java</span></div>
+          <div class="belt-item"><img src="https://cdn.simpleicons.org/cisco/1BA0D7" onerror="this.closest('.belt-item').style.display='none'" alt="Cisco" /><span>Cisco</span></div>
+          <div class="belt-item"><img src="https://cdn.simpleicons.org/intellijidea/FC801D" onerror="this.closest('.belt-item').style.display='none'" alt="IntelliJ" /><span>IntelliJ</span></div>
+          <div class="belt-item"><img src="images/vscode.png" onerror="this.closest('.belt-item').style.display='none'" alt="VS Code" /><span>VS Code</span></div>
+          <div class="belt-item"><img src="https://cdn.simpleicons.org/visualstudio/7B4BDB" onerror="this.closest('.belt-item').style.display='none'" alt="Visual Studio" /><span>Visual Studio</span></div>
+          <!-- <div class="belt-item"><img src="https://cdn.simpleicons.org/python/3776AB" onerror="this.closest('.belt-item').style.display='none'" alt="Python" /><span>Python</span></div> -->
+          <div class="belt-item"><img src="https://cdn.simpleicons.org/linux/e8e8ff" onerror="this.closest('.belt-item').style.display='none'" alt="Linux" /><span>Linux</span></div>
+          <div class="belt-item"><img src="https://cdn.simpleicons.org/ubuntu/E95420" onerror="this.closest('.belt-item').style.display='none'" alt="Ubuntu" /><span>Ubuntu</span></div>
+          <div class="belt-item"><img src="images/windows.png" onerror="this.closest('.belt-item').style.display='none'" alt="Windows" /><span>Windows</span></div>
+          <div class="belt-item"><img src="https://cdn.simpleicons.org/git/F05032" onerror="this.closest('.belt-item').style.display='none'" alt="Git" /><span>Git</span></div>
+          <div class="belt-item"><img src="https://cdn.simpleicons.org/github/d0d0ff" onerror="this.closest('.belt-item').style.display='none'" alt="GitHub" /><span>GitHub</span></div>
+          <div class="belt-item"><img src="images/ChatGPT_logo.png" onerror="this.closest('.belt-item').style.display='none'" alt="ChatGPT" /><span>ChatGPT</span></div>
+          <div class="belt-item"><img src="https://cdn.simpleicons.org/anthropic/D97757" onerror="this.closest('.belt-item').style.display='none'" alt="Claude" /><span>Claude</span></div>
+          <div class="belt-item"><img src="https://cdn.simpleicons.org/googlegemini/8E75B2" onerror="this.closest('.belt-item').style.display='none'" alt="Gemini" /><span>Gemini</span></div>
+          <div class="belt-item"><img src="https://cdn.simpleicons.org/docker/2496ED" onerror="this.closest('.belt-item').style.display='none'" alt="Docker" /><span>Docker</span></div>
+          <!-- ── Set 2 of 2 (exact duplicate — seamless splice point) ── -->
+          <div class="belt-item"><img src="https://cdn.simpleicons.org/c++/9B6CF0" onerror="this.closest('.belt-item').style.display='none'" alt="C++" /><span>C++</span></div>
+          <div class="belt-item"><img src="https://cdn.simpleicons.org/java/F58219" onerror="this.closest('.belt-item').style.display='none'" alt="Java" /><span>Java</span></div>
+          <div class="belt-item"><img src="https://cdn.simpleicons.org/cisco/1BA0D7" onerror="this.closest('.belt-item').style.display='none'" alt="Cisco" /><span>Cisco</span></div>
+          <div class="belt-item"><img src="https://cdn.simpleicons.org/intellijidea/FC801D" onerror="this.closest('.belt-item').style.display='none'" alt="IntelliJ" /><span>IntelliJ</span></div>
+          <div class="belt-item"><img src="images/vscode.png" onerror="this.closest('.belt-item').style.display='none'" alt="VS Code" /><span>VS Code</span></div>
+          <div class="belt-item"><img src="https://cdn.simpleicons.org/visualstudio/7B4BDB" onerror="this.closest('.belt-item').style.display='none'" alt="Visual Studio" /><span>Visual Studio</span></div>
+          <!-- <div class="belt-item"><img src="https://cdn.simpleicons.org/python/3776AB" onerror="this.closest('.belt-item').style.display='none'" alt="Python" /><span>Python</span></div> -->
+          <div class="belt-item"><img src="https://cdn.simpleicons.org/linux/e8e8ff" onerror="this.closest('.belt-item').style.display='none'" alt="Linux" /><span>Linux</span></div>
+          <div class="belt-item"><img src="https://cdn.simpleicons.org/ubuntu/E95420" onerror="this.closest('.belt-item').style.display='none'" alt="Ubuntu" /><span>Ubuntu</span></div>
+          <div class="belt-item"><img src="images/windows.png" onerror="this.closest('.belt-item').style.display='none'" alt="Windows" /><span>Windows</span></div>
+          <div class="belt-item"><img src="https://cdn.simpleicons.org/git/F05032" onerror="this.closest('.belt-item').style.display='none'" alt="Git" /><span>Git</span></div>
+          <div class="belt-item"><img src="https://cdn.simpleicons.org/github/d0d0ff" onerror="this.closest('.belt-item').style.display='none'" alt="GitHub" /><span>GitHub</span></div>
+          <div class="belt-item"><img src="images/ChatGPT_logo.png" onerror="this.closest('.belt-item').style.display='none'" alt="ChatGPT" /><span>ChatGPT</span></div>
+          <div class="belt-item"><img src="https://cdn.simpleicons.org/anthropic/D97757" onerror="this.closest('.belt-item').style.display='none'" alt="Claude" /><span>Claude</span></div>
+          <div class="belt-item"><img src="https://cdn.simpleicons.org/googlegemini/8E75B2" onerror="this.closest('.belt-item').style.display='none'" alt="Gemini" /><span>Gemini</span></div>
+          <div class="belt-item"><img src="https://cdn.simpleicons.org/docker/2496ED" onerror="this.closest('.belt-item').style.display='none'" alt="Docker" /><span>Docker</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== CONTACT ====== -->
+  <section id="contact">
+    <div class="section-bg-grid" aria-hidden="true"></div>
+    <div class="section-header reveal">
+      <span class="section-tag">05. Contact</span>
+      <h2>Get In <span class="highlight">Touch</span></h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info reveal" style="--delay:100ms">
+        <p class="contact-intro">Have a question, a project idea, or just want to connect? My inbox is always open.</p>
+        <div class="contact-details">
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <span class="contact-label">Email</span>
+              <a href="mailto:matus.simon15@gmail.com" class="contact-value">matus.simon15@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <span class="contact-label">Location</span>
+              <span class="contact-value">Žilina, Slovakia</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-graduation-cap"></i></div>
+            <div>
+              <span class="contact-label">Status</span>
+              <span class="contact-value">Open to opportunities</span>
+            </div>
+          </div>
+        </div>
+        <a href="resume.pdf" download class="btn-resume">
+          <i class="fas fa-download"></i>
+          <span>Download Resume</span>
+        </a>
+      </div>
+
+      <form class="contact-form reveal" style="--delay:200ms" id="contactForm">
+        <div class="form-group">
+          <label for="fname">Name</label>
+          <input type="text" id="fname" name="name" placeholder="Your name" required />
+        </div>
+        <div class="form-group">
+          <label for="femail">Email</label>
+          <input type="email" id="femail" name="email" placeholder="your@email.com" required />
+        </div>
+        <div class="form-group">
+          <label for="fmessage">Message</label>
+          <textarea id="fmessage" name="message" rows="5" placeholder="What's on your mind?" required></textarea>
+        </div>
+        <button type="submit" class="btn-send" id="sendBtn">
+          <span class="btn-send-text">Send Message</span>
+          <i class="fas fa-paper-plane"></i>
+        </button>
+        <div class="form-success" id="formSuccess">
+          <i class="fas fa-check-circle"></i>
+          <span>Message sent! I'll get back to you soon.</span>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <footer id="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">M<span class="dot">.</span></div>
+      <p class="footer-tagline">Built with passion for tech &amp; space</p>
+      <div class="footer-socials">
+        <a href="https://github.com/matusep?tab=overview&from=2026-04-01&to=2026-04-25" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+       <!---- <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>-->
+        <a href="https://www.instagram.com/matusep?igsh=MXhlYnBsY2xrdGx3cw==" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="mailto:matus.simon15@gmail.com" class="social-link" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+      <div class="footer-divider"></div>
+      <p class="footer-copy">© 2026 Matthew &nbsp;·&nbsp; Information &amp; Networking Technologies Student &nbsp;·&nbsp; Žilina</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
